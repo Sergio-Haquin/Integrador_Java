@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GlobalJavaGrupo.iml" filepath="$PROJECT_DIR$/GlobalJavaGrupo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/integrador-buen-sabor.iml" filepath="$PROJECT_DIR$/.idea/modules/integrador-buen-sabor.iml" />
     </modules>
   </component>
 </project>

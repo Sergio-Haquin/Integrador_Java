@@ -4,6 +4,7 @@ import Entities.Enums.TipoPromocion;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.List;
 
 public class Promocion extends Base{
     private String denominacion;
@@ -14,10 +15,12 @@ public class Promocion extends Base{
     private String descripcionDescuento;
     private Double precioPromocional;
     private TipoPromocion tipoPromocion;
+    private Articulo articulo;
+    private List<Imagen> imagenes;
 
     public Promocion() {}
 
-    public Promocion(Long ID, String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion) {
+    public Promocion(Long ID, String denominacion, LocalDate fechaDesde, LocalDate fechaHasta, LocalTime horaDesde, LocalTime horaHasta, String descripcionDescuento, Double precioPromocional, TipoPromocion tipoPromocion, Articulo articulo) {
         super(ID);
         this.denominacion = denominacion;
         this.fechaDesde = fechaDesde;
@@ -27,6 +30,7 @@ public class Promocion extends Base{
         this.descripcionDescuento = descripcionDescuento;
         this.precioPromocional = precioPromocional;
         this.tipoPromocion = tipoPromocion;
+        this.articulo = articulo;
     }
 
     public String getDenominacion() {
@@ -92,4 +96,14 @@ public class Promocion extends Base{
     public void setTipoPromocion(TipoPromocion tipoPromocion) {
         this.tipoPromocion = tipoPromocion;
     }
+
+    public Articulo getArticulo() {
+        return articulo;
+    }
+
+    public void setArticulo(Articulo articulo) {
+        this.articulo = articulo;
+    }
+
+    public void agregarImagen(Imagen i) {imagenes.add(i);}
 }

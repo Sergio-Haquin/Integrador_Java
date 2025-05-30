@@ -1,12 +1,15 @@
 package Entities;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class Categoria extends Base{
     private String denominacion;
     private Categoria categoriaPadre;
     private Set<Categoria> subCategorias = new HashSet<>();
+    private List<Articulo> articulos = new ArrayList<>();
 
     public Categoria() {
 
@@ -39,5 +42,13 @@ public class Categoria extends Base{
 
     public void setSubCategorias(Set<Categoria> subCategorias) {
         this.subCategorias = subCategorias;
+    }
+
+    public List<Articulo> getArticulos() {
+        return articulos;
+    }
+
+    public void setArticulos(Articulo a) {
+        articulos.add(a);
     }
 }
